@@ -1,6 +1,11 @@
+
+
+import { Component } from '@angular/core';
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+
 
 
 @Component({
@@ -8,12 +13,6 @@ import { AuthService } from '../auth.service';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent implements OnInit {
-  constructor(private authService: AuthService, private router: Router) {}
+export class LayoutComponent {
 
-  ngOnInit(): void {
-    if (!this.authService.isAuthenticated()) {
-      this.router.navigate(['/login']);
-    }
-  }
 }
